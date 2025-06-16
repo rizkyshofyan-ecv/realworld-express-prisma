@@ -152,7 +152,7 @@ Topics covered include:
   console.log(`Created articles: ${article1.title}, ${article2.title}, ${article3.title}`);
 
   // Create comments
-  const comment1 = await prisma.comment.create({
+  await prisma.comment.create({
     data: {
       body: 'Great introduction to AWS WAF! This will be very helpful for my upcoming project.',
       authorUsername: 'janedoe',
@@ -160,7 +160,7 @@ Topics covered include:
     },
   });
 
-  const comment2 = await prisma.comment.create({
+  await prisma.comment.create({
     data: {
       body: 'Thanks for the detailed guide on implementing WAF with CloudFront. I was able to follow along and set it up for my application.',
       authorUsername: 'janedoe',
@@ -168,7 +168,7 @@ Topics covered include:
     },
   });
 
-  const comment3 = await prisma.comment.create({
+  await prisma.comment.create({
     data: {
       body: 'I appreciate the TypeScript best practices. The section on generics was particularly helpful.',
       authorUsername: 'johndoe',
