@@ -10,6 +10,7 @@
     "develop": "DEBUG=express:* dotenv -e .env.development -- npx ts-node-dev --rs --clear --exit-child src/server.ts",
     "studio:develop": "dotenv -e .env.development -- npx prisma studio",
     "migrate:develop": "dotenv -e .env.development -- npx prisma db push",
+    "db:seed": "dotenv -e .env.development -- ts-node prisma/seed.ts",
     "lint": "npx eslint .",
     "style": "npx prettier --check .",
     "test": "dotenv -e .env.development -- jest -i",
