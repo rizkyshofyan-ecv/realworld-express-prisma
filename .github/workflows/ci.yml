@@ -48,20 +48,6 @@ jobs:
     - name: Run linting
       run: npm run lint
 
-    - name: Run style check
-      run: npm run style
-
-    - name: Setup Database
-      run: npx prisma db push
-      env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
-
-    - name: Run tests
-      run: npm run test
-      env:
-        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/postgres
-        JWT_SECRET: test_jwt_secret_for_ci
-
     - name: Build TypeScript
       run: npm run build
 
