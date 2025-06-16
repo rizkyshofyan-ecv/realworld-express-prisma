@@ -1,6 +1,9 @@
 # Builder stage
 FROM node:18-slim AS builder
 
+# Install OpenSSL for Prisma in the builder stage
+RUN apt-get update -y && apt-get install -y openssl ca-certificates
+
 # Set working directory
 WORKDIR /app
 
